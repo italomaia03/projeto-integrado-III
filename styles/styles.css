@@ -1,0 +1,39 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  width: 100%;
+  height: 80px;
+  background: #FBFBFB;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: row;
+  background: #929AA9;
+}
+
+.menu_lateral {
+  width: 284px;
+  height: 842px;
+  background: #F0F1F3;
+}
+
+.painel {
+  flex-grow: 1; /* Ocupa o espaço restante */
+  height: 842px;
+  background-color: #9999ff;
+}
+
+.rodape {
+  width: 100%;
+  height: 60px;
+  background: #F9F9FB;
+}
