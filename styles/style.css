@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; /* Adicionado para incluir o padding e a borda no cálculo do tamanho */
+  box-sizing: border-box;
 }
 
 body {
@@ -11,6 +11,11 @@ body {
   justify-content: flex-start;
   min-height: 100vh;
   margin: 0;
+}
+
+main {
+  display: flex;
+  width: 100%;
 }
 
 header {
@@ -25,27 +30,23 @@ nav.nav_topo {
   align-items: center;
 }
 
-main {
-  display: flex;
-  width: 100%;
-}
-
 .menu {
-  flex: 0 0 15%; /* Tamanho fixo da barra de menu */
-  background-color: #f0f0f0; /* Cor adicionada para distinguir da área de conteúdo */
+  flex: 0 0 15%;
+  background-color: #f0f0f0;
   padding: 10px;
 }
 
 .painel {
   flex: 1;
   background-color: rgb(77, 85, 85);
+  box-sizing: border-box
 }
 
 .caminho-painel {
   width: 100%;
   padding: 10px;
-  background: #333;
   border-radius: 3px;
+  background: #567878;
 }
 
 .menu_topo {
@@ -66,7 +67,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* Estilos opcionais para o rodapé */
 footer {
   width: 100%;
   background-color: #333;
