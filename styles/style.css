@@ -34,6 +34,7 @@ header {
 .imagem-usuario {
   width: 60px;
   height: 60px;
+  margin-top: 2px;
 }
 
 .icones_usuario {
@@ -69,7 +70,6 @@ span{
 
 .painel {
   flex: 1;
-  height: 460px;
   background-color: rgb(77, 85, 85);
   box-sizing: border-box
 }
@@ -81,6 +81,9 @@ span{
   background: #567878;
 }
 
+.img-acesso-rapido{
+  margin: 10px 0 0 5px;
+}
 .menu {
   padding-right: 136px;
   padding-left: 24px;
