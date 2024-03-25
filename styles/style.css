@@ -1,6 +1,7 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Adicionado para incluir o padding e a borda no cálculo do tamanho */
 }
 
 body {
@@ -26,35 +27,39 @@ nav.nav_topo {
 
 main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
-  max-width: 1200px;
-  padding: 20px;
 }
 
 .menu {
-  width: 70%;
+  flex: 0 0 15%; /* Tamanho fixo da barra de menu */
+  background-color: #f0f0f0; /* Cor adicionada para distinguir da área de conteúdo */
+  padding: 10px;
 }
 
 .painel {
-  width: 25%;
-  margin-top: 20px;
+  flex: 1;
+  background-color: rgb(77, 85, 85);
 }
 
-.menu_topo{
+.caminho-painel {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  border-radius: 3px;
+}
+
+.menu_topo {
   display: flex;
-  flex-direction: row;
   gap: 3.5rem;
-  justify-content: space-between;
 }
 
-/* Estilos de exemplo para o conteúdo */
+.menu_topo li {
+  list-style: none;
+}
+
 .nav_menu ul {
   list-style-type: none;
   padding: 0;
-
 }
 
 .nav_menu ul li {
