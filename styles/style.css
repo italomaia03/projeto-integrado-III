@@ -70,14 +70,14 @@ span{
 
 .painel {
   flex: 1;
-  background-color: rgb(77, 85, 85);
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box
 }
 
 .caminho-painel {
   width: 100%;
   padding: 10px;
-  border-radius: 3px;
+
   background: #567878;
 }
 
@@ -87,6 +87,7 @@ span{
 .menu {
   padding-right: 136px;
   padding-left: 24px;
+  background-color: rgb(255, 255, 255);
 }
 .nav_menu ul {
   list-style-type: none;
