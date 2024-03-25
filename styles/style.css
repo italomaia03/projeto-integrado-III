@@ -1,0 +1,63 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+nav.nav_topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.menu {
+  width: 70%;
+}
+
+.painel {
+  width: 25%;
+  margin-top: 20px;
+}
+
+/* Estilos de exemplo para o conteúdo */
+.nav_menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav_menu ul li {
+  margin-bottom: 10px;
+}
+
+/* Estilos opcionais para o rodapé */
+footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
