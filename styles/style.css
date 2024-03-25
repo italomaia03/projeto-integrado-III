@@ -24,7 +24,6 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #f0f0f0;
-  padding: 10px;
 }
 
 .usuario {
@@ -33,14 +32,29 @@ header {
 }
 
 .imagem-usuario {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.icones_usuario {
+  margin: 28px 0px 0px -120px;
+}
+
+span{
+  color: #1a232c;
+  text-align: center;
+  font-family: Inika;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 4px;
 }
 
 .menu_topo {
   display: flex;
   gap: 3.5rem;
+  margin-right: 30px;
   list-style: none;
 }
 
