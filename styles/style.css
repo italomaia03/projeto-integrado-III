@@ -43,10 +43,18 @@ main {
   margin-top: 20px;
 }
 
+.menu_topo{
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  justify-content: space-between;
+}
+
 /* Estilos de exemplo para o conteúdo */
 .nav_menu ul {
   list-style-type: none;
   padding: 0;
+
 }
 
 .nav_menu ul li {
