@@ -23,7 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F0F4F8;
+  background-color: #F7F7F7;
 }
 
 .usuario {
@@ -73,7 +73,7 @@ span{
 
 .menu_topo li a {
   text-decoration: none;
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #333;
 }
 
