@@ -23,7 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .usuario {
@@ -56,7 +56,6 @@ span{
   display: flex;
   gap: 3.5rem;
   margin-right: 30px;
-  list-style: none;
 }
 
 .menu_topo li {
@@ -68,6 +67,11 @@ span{
   margin-right: 0;
 }
 
+.menu_topo li a {
+  text-decoration: none;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
 .painel {
   flex: 1;
   background-color: rgb(255, 255, 255);
@@ -77,25 +81,51 @@ span{
 .caminho-painel {
   width: 100%;
   padding: 10px;
-
-  background: #567878;
+  font-family: Verdana, Tahoma, sans-serif;
+  background: #ddd;
 }
 
 .img-acesso-rapido{
-  margin: 10px 0 0 5px;
+  margin: 20px 0 0 20px;
 }
+
 .menu {
-  padding-right: 136px;
-  padding-left: 24px;
-  background-color: rgb(255, 255, 255);
+  width: 200px;
+  padding: 20px 0;
+  background-color: #f4f4f4;
 }
+
 .nav_menu ul {
   list-style-type: none;
-  padding: 10px 10px ;
+  padding: 0;
+  margin: 0;
 }
 
 .nav_menu ul li {
   margin-bottom: 10px;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+.nav_menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #270a0a;
+  transition: background-color 0.3s ease;
+}
+
+.nav_menu ul li a:hover {
+  background-color: #ddd;
+}
+
+.nav_menu ul li:first-child a {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.nav_menu ul li:last-child a {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 footer {
