@@ -23,7 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #F0F4F8;
 }
 
 .usuario {
@@ -42,7 +42,7 @@ header {
 }
 
 span{
-  color: #1a232c;
+  color: #333;
   text-align: center;
   font-family: Inika;
   font-size: 20px;
@@ -70,6 +70,7 @@ span{
 .menu_topo li a {
   text-decoration: none;
   font-family: Verdana, Tahoma, sans-serif;
+  color: #333;
 }
 
 .painel {
@@ -82,17 +83,16 @@ span{
   width: 100%;
   padding: 10px;
   font-family: Verdana, Tahoma, sans-serif;
-  background: #ddd;
 }
 
 .img-acesso-rapido{
-  margin: 20px 0 0 20px;
+  margin: 0 0 0 20px;
 }
 
 .menu {
   width: 200px;
   padding: 20px 0;
-  background-color: #f4f4f4;
+  background-color: #E8F1F2;
 }
 
 .nav_menu ul {
@@ -110,18 +110,19 @@ span{
   display: block;
   padding: 10px 20px;
   text-decoration: none;
-  color: #270a0a;
+  color: #000000;
   transition: background-color 0.3s ease;
 }
 
 .nav_menu ul li a:hover {
-  background-color: #60717a;
+  background-color: #004585;
+  color: #ffffff;
 }
 
 footer {
   width: 100%;
   background-color: #0f354b;
-  color: #fff;
+  color: #333;
   text-align: center;
   padding: 20px 0;
 }
