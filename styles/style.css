@@ -41,6 +41,10 @@ header {
   margin: 28px 0px 0px -120px;
 }
 
+.icones_usuario a img {
+  padding: 0 3px 0 3px;
+}
+
 span{
   color: #333;
   text-align: center;
