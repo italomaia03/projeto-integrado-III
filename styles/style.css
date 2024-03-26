@@ -129,6 +129,12 @@ span{
   height: 24px;
 }
 
+.nav_menu ul li a div{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 footer {
   width: 100%;
   background-color: #0f354b;
