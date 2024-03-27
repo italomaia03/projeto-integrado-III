@@ -49,10 +49,10 @@ span{
   margin-top: 4px;
 }
 
+
 .menu_topo {
   display: flex;
   list-style: none;
-  gap: 3.5rem;
   margin-right: 30px;
   font-family: sans-serif;
 }
@@ -62,6 +62,11 @@ span{
   text-decoration: none;
   color: black;
   padding: 1.5rem;
+}
+
+.menu_topo a:hover {
+  background: rgba(128, 123, 123, 0.5);
+  color: rgb(49, 55, 143);
 }
 
 .painel {
