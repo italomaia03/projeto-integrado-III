@@ -7,10 +7,6 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  margin: 0;
 }
 
 main {
@@ -22,13 +18,12 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #F7F7F7;
+  height: 70px;
+  background: #e7e7e7;
 }
 
 .usuario {
   display: flex;
-  align-items: flex-start;
 }
 
 .imagem-usuario {
@@ -50,43 +45,27 @@ span{
   text-align: center;
   font-family: Inika;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
   line-height: normal;
   margin-top: 4px;
 }
 
 .menu_topo {
   display: flex;
+  list-style: none;
   gap: 3.5rem;
   margin-right: 30px;
+  font-family: sans-serif;
 }
 
-.menu_topo li {
-  list-style: none;
-  margin-bottom: 0; 
-}
-
-.menu_topo li:last-child {
-  margin-right: 0;
-}
-
-.menu_topo li a {
+.menu_topo a {
+  display: block;
   text-decoration: none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #333;
+  color: black;
+  padding: 1.5rem;
 }
 
 .painel {
-  flex: 1;
   background-color: rgb(255, 255, 255);
-  box-sizing: border-box
-}
-
-.caminho-painel {
-  width: 100%;
-  padding: 10px;
-  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .img-acesso-rapido{
@@ -97,12 +76,6 @@ span{
   width: 200px;
   padding: 20px 0;
   background-color: #E8F1F2;
-}
-
-.nav_menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav_menu ul li {
@@ -141,12 +114,6 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 20px 0;
-}
-
-footer ul li {
-  padding: 20px;
-  display: inline-block;
-  margin-bottom: 8px;
 }
 
 
