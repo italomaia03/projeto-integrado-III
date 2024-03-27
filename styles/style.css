@@ -146,6 +146,7 @@ footer {
 footer ul li {
   padding: 20px;
   display: inline-block;
+  margin-bottom: 8px;
 }
 
 
