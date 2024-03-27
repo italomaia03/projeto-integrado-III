@@ -20,6 +20,8 @@ Um sistema simples desenvolvido em JavaScript para gerenciar estoques de superme
 
 ## Equipe:
 
-[Francisco Eliésio de Sousa Silva](https://github.com/fcoeliesio).
-[Gustavo Pereira de Aragão](https://github.com/McGusT99).
-[Ítalo Fernandes de Oliveira Maia](https://github.com/italomaia03).
+[Francisco Eliésio de Sousa Silva](https://github.com/fcoeliesio)
+
+[Gustavo Pereira de Aragão](https://github.com/McGusT99)
+
+[Ítalo Fernandes de Oliveira Maia](https://github.com/italomaia03)
