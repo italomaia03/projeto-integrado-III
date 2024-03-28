@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   height: 70px;
-  background: #e7e7e7;
+  background: #2d3737;
 }
 
 .usuario {
@@ -41,7 +41,7 @@ header {
 }
 
 span{
-  color: #333;
+  color: #ffffff;
   text-align: center;
   font-family: Inika;
   font-size: 20px;
@@ -60,17 +60,18 @@ span{
 .menu_topo a {
   display: block;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
   padding: 1.5rem;
 }
 
 .menu_topo a:hover {
-  background: rgba(128, 123, 123, 0.5);
-  color: rgb(49, 55, 143);
+  background: rgba(82, 80, 80, 0.5);
+  color: rgb(255, 255, 255);
 }
 
 .painel {
-  background-color: rgb(255, 255, 255);
+  width: 100%;
+  background-color: rgb(72, 85, 85)
 }
 
 .img-acesso-rapido{
@@ -78,9 +79,9 @@ span{
 }
 
 .menu {
-  width: 200px;
-  padding: 20px 0;
-  background-color: #E8F1F2;
+  width: 250px;
+  padding: 20px 0px;
+  background-color: rgb(35, 43, 43);
 }
 
 .nav_menu ul li {
@@ -93,12 +94,12 @@ span{
   display: block;
   padding: 10px 20px;
   text-decoration: none;
-  color: #000000;
+  color: #ebebeb;
   transition: background-color 0.3s ease;
 }
 
 .nav_menu ul li a:hover {
-  background-color: #004585;
+  background-color: #2D3737;
   color: #ffffff;
 }
 
@@ -115,7 +116,7 @@ span{
 
 footer {
   width: 100%;
-  background-color: #0f354b;
+  background-color: #2d3737;
   color: #ffffff;
   text-align: center;
   padding: 20px 0;
