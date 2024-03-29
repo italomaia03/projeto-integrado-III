@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  background: #2d3737;
+}
+
+.usuario {
+  display: flex;
+  margin-top: 8px;
+  margin-left: 15px;
+}
+
+.imagem-usuario {
+  width: 60px;
+  height: 60px;
+
+}
+
+.icones_usuario {
+  margin: 28px 0px 0px -142px;
+}
+
+.icones_usuario img:hover {
+  scale: 1.05;
+}
+
+.icones_usuario a img {
+  padding: 0 3px 0 3px;
+}
+
+span{
+  color: #ffffff;
+  text-align: center;
+/*  font-family: Inika;*/
+  font-size: 20px;
+  line-height: normal;
+  margin-top: 4px;
+}
+
+.menu_topo {
+  display: flex;
+  list-style: none;
+  margin-right: 30px;
+  font-family: sans-serif;
+}
+
+.menu_topo a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1.5rem;
+}
+
+.menu_topo a:hover {
+  background: rgba(82, 80, 80, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.painel {
+  width: 100%;
+  background-color: rgb(72, 85, 85);
+  padding-top: 10px;
+  padding-left: 10px;
+  
+}
+
+.caminho-painel{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 64px;
+  flex-shrink: 0;
+  background: #2D3737;
+}
+
+.images {
+  margin-left: 10px;
+  
+}
+
+.menu {
+  width: 250px;
+  padding: 20px 0px;
+  background-color: rgb(35, 43, 43);
+}
+
+.nav_menu ul li {
+  margin-bottom: 8px;
+  font-family: Verdana, Tahoma, sans-serif;
+  align-items: center;
+}
+
+.nav_menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ebebeb;
+  transition: background-color 0.3s ease;
+}
+
+.nav_menu ul li a:hover {
+  background-color: #2D3737;
+  color: #ffffff;
+}
+
+.nav_menu ul li a img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav_menu ul li a div{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+footer {
+  width: 100%;
+  background-color: #2d3737;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
