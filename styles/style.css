@@ -49,7 +49,6 @@ span{
   margin-top: 4px;
 }
 
-
 .menu_topo {
   display: flex;
   list-style: none;
@@ -74,8 +73,20 @@ span{
   background-color: rgb(72, 85, 85)
 }
 
-.img-acesso-rapido{
-  margin: 0 0 0 20px;
+.caminho-painel{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 64px;
+  flex-shrink: 0;
+  background: #2D3737;
+}
+
+.images {
+  margin-left: 10px;
+  
 }
 
 .menu {
