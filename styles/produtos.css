@@ -56,6 +56,7 @@ body {
 #actions-container {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -106,7 +107,7 @@ table {
     height: 100%;
     text-align: center;
     table-layout: fixed;
-    display: table;
+    border-spacing: 0;
     background-color: #3d4848;
     margin-top: 1%;
     overflow: hidden;   
@@ -169,6 +170,11 @@ tr:nth-child(even){
 #search-input {
     border: none;
     font-size: 1rem;
+    color: black;
+}
+
+#search-input:focus{
+    outline: none;
 }
 
 
