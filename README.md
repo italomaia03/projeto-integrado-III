@@ -1,13 +1,14 @@
-# Sistema de Controle de Estoque
+# Somar Mercantil - Sistema WEB
 
-Um sistema simples desenvolvido em JavaScript para gerenciar estoques de supermercados de bairro.
+Projeto (front-end) de um MVP-Web da disciplina de Projeto Integrado III da Universidade Federal do Cariri (UFCA)
 
-## Funcionalidades
+## Equipe:
 
-    Adicionar, atualizar e excluir produtos;
-    Visualizar lista de produtos disponíveis;
-    Acompanhar quantidade atual de cada produto em estoque;
-    Comunicação com sistemas externos através de API.
+[Francisco Eliésio de Sousa Silva](https://github.com/fcoeliesio)
+
+[Gustavo Pereira de Aragão](https://github.com/McGusT99)
+
+[Ítalo Fernandes de Oliveira Maia](https://github.com/italomaia03)
 
 ## Tecnologias Utilizadas
 
@@ -17,11 +18,5 @@ Um sistema simples desenvolvido em JavaScript para gerenciar estoques de superme
 
 ## Estrutura do Projeto
 
-
-## Equipe:
-
-[Francisco Eliésio de Sousa Silva](https://github.com/fcoeliesio)
-
-[Gustavo Pereira de Aragão](https://github.com/McGusT99)
-
-[Ítalo Fernandes de Oliveira Maia](https://github.com/italomaia03)
+...
+...
