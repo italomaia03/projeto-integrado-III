@@ -5,6 +5,7 @@
     padding: 0;
     color: white;
     box-sizing: border-box;
+    font-family: "Inter";
 }
 
 body {
@@ -12,7 +13,6 @@ body {
 }
 
 #controle {
-    margin: .5rem 1rem;
     width: 98%;
     height: 90%;
     background-color: #232B2B;
@@ -49,9 +49,10 @@ body {
 #card-icon {
     width: 4rem;
     height: 4rem;
-    display: inline-block;
     background-color: transparent;
     border: none;
+    align-items: center;
+    display: flex;
 }
 
 #actions-container {
@@ -68,6 +69,8 @@ body {
     padding: .25rem 1rem;
     border-radius: 8px;
     border: none;
+    margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .icon-container {
@@ -163,19 +166,24 @@ tr:nth-child(even) {
 
 #new-report {
     background-color: #0C96B6;
-    padding: 0.25rem 4rem;
+    padding: .25rem 1rem;
 }
 
 #search-field {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    color: #232B2B;
     display: flex;
     padding: .25rem .25rem;
     justify-content: space-between;
     align-items: center;
     border-radius: .5rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 4px;
 }
 
 #search-input {
+    color: #232B2B;
     border: none;
     font-size: 1rem;
 }
