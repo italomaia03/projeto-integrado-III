@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/controle.css">
-    <title>controle de estoque</title>
+    <title>Controle de Estoque</title>
 </head>
-
 <body>
     <main id="controle">
         <div class="container">
             <section id="path" class="controle">
                 <span id="path-container">
-                    <a href="../index.html">inicio</a>
-                    <span></span>
-                    <span>vendas</span>
+                    <a href="../index.html">Inicio</a>
+                    <span>/</span>
+                    <span>Vendas</span>
                 </span>
             </section>
             <section id="controle-content" class="controle">
                 <section id="actions">
                     <div id="card-icon">
-                        <img src="../assets/icons/card_credit.jpg" alt="cartão de crédito">
+                        <img src="../assets/icons/Card.svg" alt="cartão de crédito">
                     </div>
                     <div id="date-filters">
                         <label for="start-date">Vendas de:</label>
                         <input type="date" id="start-date" name="start-date">
                         <label for="end-date">Até:</label>
                         <input type="date" id="end-date" name="end-date">
-                        <label for="filter">Filtro:</label>
                         <select id="filter" name="filter">
-                            <option value="todos">Todos</option>
+                            <option value="todas">Todas</option>
                             <option value="recentes">Mais recentes</option>
                             <option value="antigos">Mais antigos</option>
                         </select>
                     </div>
-                    </button>
                     <button id="new-report" class="action">
                         <div class="icon-container">
                             <img src="../assets/icons/File.png" alt="Sinal de adição" />
@@ -49,11 +45,12 @@
                         </button>
                     </form>
                 </section>
-            </section id="pagination">
-            <span>Página: </span>
-            <span>1</span>
-            <span>de</span>
-            <span>1</span>
+            </section>
+            <section id="pagination">
+                <span>Página: </span>
+                <span>1</span>
+                <span>de</span>
+                <span>1</span>
             </section>
             <section id="vendas-list">
                 <table cellpadding="0" cellspacing="0">
@@ -79,13 +76,13 @@
                             <td>
                                 <div id="vendas-actions">
                                     <button class="icon-container">
+                                        <img src="../assets/icons/google-web-search.png" alt="Pesquisar">
+                                    </button>
+                                    <button class="icon-container">
                                         <img src="../assets/icons/Analyze.png" alt="Analisar Produto" />
                                     </button>
                                     <button class="icon-container">
                                         <img src="../assets/icons/Create.png" alt="Editar Produto" />
-                                    </button>
-                                    <button class="icon-container">
-                                        <img src="../assets/icons/google-web-search.jpg" alt="Pesquisar">
                                     </button>
                                 </div>
                             </td>
@@ -93,17 +90,16 @@
                     </tbody>
                 </table>
             </section>
-        </section>
-        <section>
-          <span>Resultados por página: </span>
-          <select name="items-per-page" id="items-shown">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-          </select>
-        </section>
+            <section>
+                <span>Resultados por página: </span>
+                <select name="items-per-page" id="items-shown">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>
+            </section>
         </div>
     </main>
 </body>
