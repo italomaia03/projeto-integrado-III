@@ -11,9 +11,12 @@
 <body>
 <header>
   <div class="usuario">
-    <img class="imagem-usuario" src="assets/icons/usr_imagem.png" alt="Imagem do usuário">
-    <span>Francisco José</span>
-    <br>
+    <div>
+    <img class="imagem-usuario" src="assets/icons/usr_imagem2.png" alt="Imagem do usuário">
+    </div>
+    <div class="div-nome-usuario">
+    <span class="nome-usuario">Francisco José</span>
+    </div>
     <div class="icones_usuario">
       <a href=""><img src="assets/icons/usr_informacao.png" alt="Editar Informações"></img></a>
       <a href=""><img src="assets/icons/usr_configuracao.png" alt="Configurações de usuário"></a>
@@ -43,13 +46,57 @@
           <li><a href="#"><div><img src="assets/icons/menu_faturamento.png" alt=""> Faturamento</div></a></li>
         </ul>
       </nav>
-    </aside>
-      <div class="painel">
-        <h1>CONTEÚDO DO PAINEL</h1>
+      <div class="manual-suporte">
+        <div class="icone-suporte">
+          <a href="/"><img src="./assets/icons/footer_suporte.png" alt="Ícone de suporte"></a>
+          <a href="" class="texto-suporte">Suporte</a>
+        </div>
+        <div class="icone-suporte">
+          <a href="/"><img src="./assets/icons/footer_manual_pdf.png" alt="Ícone de manual"></a>
+          <a href="" class="texto-suporte">Manual</a>
+        </div>
       </div>
+    </aside>
+    <div class="painel">
+      <!--Colocar páginas aqui-->
+      <iframe src="./pages/acesso-rapido.html" width="98%" height="600px" style="border: 0px;"></iframe>
+    </div>
   </main>
   <footer>
-    <h5>CONTEÚDO DO RODAPÉ</h1>
-  </footer>
+    <div class="footer-conteudo">
+        <ul class="footer-lista">
+            <li>
+                <h3>Institucional</h3>
+            </li>
+            <li class="texto-lista">
+              <a href="" class="footer-links"><p>Grupo Somar</p></a>
+              <a href="" class="footer-links"><p>Nossas lojas</p></a>
+              <a href="" class="footer-links"><p>Franquias</p></a>
+            </li>
+        </ul>
+        <ul class="footer-lista">
+          <li>
+              <h3>Serviços</h3>
+          </li>
+          <li class="texto-lista">
+            <a href="" class="footer-links"><p>Gestão de Pessoas</p></a>
+            <a href="" class="footer-links"><p>Tecnologia da Informação</p></a>
+            <a href="" class="footer-links"><p>Webmail</p></a>
+          </li>
+        </ul>
+        <ul class="footer-lista">
+            <li>
+                <h3>Redes Sociais</h3>
+            </li>
+            <li><a href=""><div class="footer-social-media"><img src="./assets/icons/footer_instagram.png" alt="" class="images-footer">/somar.mercantil</div></a></li>
+            <li><a href=""><div class="footer-social-media"><img src="./assets/icons/footer_linkedin.png" alt="" class="images-footer">/somar-mercantil</div></a></li>
+            <li><a href=""><div class="footer-social-media"><img src="./assets/icons/footer_youtube.png" alt="" class="images-footer">@SomarMercantil</div></a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+       &#169;
+       Copyright 2024 Somar Mercantil. Todos os direitos reservados.
+    </div>
+</footer>
 </body>
 </html>
