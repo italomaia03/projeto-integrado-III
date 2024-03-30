@@ -20,7 +20,6 @@ export class AcoesTabela {
             botao.appendChild(icone);
             return botao;
         });
-        console.log(botoes);
         botoes.forEach(botao => botao.classList.add("icon-container"));
         return botoes; 
     }

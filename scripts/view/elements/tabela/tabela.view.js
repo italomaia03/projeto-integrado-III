@@ -36,7 +36,6 @@ export class Tabela {
     const cabecalho = document.createElement("thead");
     const titulos = this.criarCabecalho();
     const dados = this.mapearDados();
-    console.log(dados);
     cabecalho.appendChild(titulos);
     dados.forEach((dado) => corpo.appendChild(dado));
     tabela.appendChild(cabecalho);
