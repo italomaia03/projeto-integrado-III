@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/produtos.css" />
+    <script type="module" src="../scripts/script.js"></script>
     <title>Produtos</title>
   </head>
   <body>
@@ -68,59 +69,7 @@
             <span>de</span>
             <span>1</span>
           </section>
-          <section id="products-list">
-            <table cellpadding="0" cellspacing="0">
-              <thead>
-                <tr>
-                  <th>Código</th>
-                  <th>Nome</th>
-                  <th>Foto</th>
-                  <th>Classificação</th>
-                  <th>Marca</th>
-                  <th>Preço</th>
-                  <th>Açoes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>0000001</td>
-                  <td>Vinho Padre Cícero</td>
-                  <td>
-                    <img
-                      src="../assets/images/vinho_padre_cicero.png"
-                      alt="Vinho Padre Cícero"
-                    />
-                  </td>
-                  <td>Bebida Alcoólica</td>
-                  <td>Vinhos LTDA</td>
-                  <td>R$ 4,99</td>
-                  <td>
-                    <div id="product-actions">
-                      <button class="icon-container">
-                        <img
-                          src="../assets/icons/Analyze.png"
-                          alt="Analisar Produto"
-                        />
-                      </button>
-                      <button class="icon-container">
-                        <img
-                          src="../assets/icons/Create.png"
-                          alt="Editar Produto"
-                        />
-                      </button>
-                      <button class="icon-container">
-                        <img
-                          src="../assets/icons/delete.svg"
-                          alt="Remover Produto"
-                        />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </section>
+          <section id="products-list"></section>
         <section>
           <span>Resultados por página: </span>
           <select name="items-per-page" id="items-shown">
