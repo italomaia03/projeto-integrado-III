@@ -30,10 +30,13 @@ header {
   margin-left: 15px;
 }
 
+.div-nome-usuario {
+  margin-top: 3px;
+}
+
 .imagem-usuario {
   width: 60px;
   height: 60px;
-
 }
 
 .icones_usuario {
@@ -48,10 +51,9 @@ header {
   padding: 0 3px 0 3px;
 }
 
-span{
+.nome-usuario {
   color: #ffffff;
   text-align: center;
-/*  font-family: Inika;*/
   font-size: 20px;
   line-height: normal;
   margin-top: 4px;
@@ -72,7 +74,7 @@ span{
 }
 
 .menu_topo a:hover {
-  background: rgba(82, 80, 80, 0.5);
+  background: rgb(72, 85, 85);
   color: rgb(255, 255, 255);
 }
 
@@ -121,7 +123,7 @@ span{
 }
 
 .nav_menu ul li a:hover {
-  background-color: #2D3737;
+  background-color: rgb(72, 85, 85);
   color: #ffffff;
 }
 
@@ -137,11 +139,67 @@ span{
 }
 
 footer {
-  width: 100%;
-  background-color: #2d3737;
-  color: #ffffff;
-  text-align: center;
+  background-color: #2D3737;
   padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
 }
 
+.footer-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
 
+.manual-suporte {
+  display: flex;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.texto-suporte {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.icone-suporte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manual-suporte a {
+  margin-right: 20px;
+}
+
+.manual-suporte img {
+  width: 30px;
+  height: 30px;
+}
+
+.manual-suporte a img:hover {
+  scale: 1.05;
+}
+
+.footer-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-lista li {
+  margin-bottom: 10px;
+}
+
+.footer-lista h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
