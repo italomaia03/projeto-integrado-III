@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/controle_vendas.css">
+    <title>Controle de Estoque</title>
+</head>
+<body>
+    <main id="controle">
+        <div class="container">
+            <section id="path" class="controle">
+                <span id="path-container">
+                    <a href="./controle_vendas.html">Inicio</a>
+                    <span>/</span>
+                    <span>Vendas</span>
+                </span>
+            </section>
+            <section id="controle-content" class="controle">
+                <section id="actions">
+                    <div id="card-icon">
+                        <img src="../assets/icons/Card.svg" alt="cartão de crédito">
+                    </div>
+                    <div id="date-filters">
+                        <label for="start-date">Vendas de:</label>
+                        <input type="date" id="start-date" name="start-date">
+                        <label for="end-date">Até:</label>
+                        <input type="date" id="end-date" name="end-date">
+                        <select id="filter" name="filter">
+                            <option value="todas">Todas</option>
+                            <option value="recentes">Mais recentes</option>
+                            <option value="antigos">Mais antigos</option>
+                        </select>
+                    </div>
+                    <button id="new-report" class="action">
+                        <div class="icon-container">
+                            <img src="../assets/icons/File.png" alt="Sinal de adição" />
+                        </div>
+                        <span>Gerar Relatório</span>
+                    </button>
+                    <form action="" id="search-field">
+                        <input type="text" name="search" id="search-input" placeholder="Buscar Vendas..." />
+                        <button type="submit" class="icon-container">
+                            <img src="../assets/icons/Search.svg" alt="Ícone de Busca" />
+                        </button>
+                    </form>
+                </section>
+            </section>
+            <section id="pagination">
+                <span>Página: </span>
+                <span>1</span>
+                <span>de</span>
+                <span>1</span>
+            </section>
+            <section id="vendas-list">
+                <table cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Situação</th>
+                            <th>Caixa</th>
+                            <th>Data</th>
+                            <th>Vendedor</th>
+                            <th>Codigo</th>
+                            <th>Preço</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../assets/icons/yes.png" alt="Ok"></td>
+                            <td>1</td>
+                            <td>18/12/2023 16:34</td>
+                            <td>Ciro Bottini</td>
+                            <td>0000001</td>
+                            <td>R$ 4,99</td>
+                            <td>
+                                <div id="vendas-actions">
+                                    <button class="icon-container">
+                                        <img src="../assets/icons/google-web-search.png" alt="Pesquisar">
+                                    </button>
+                                    <button class="icon-container">
+                                        <img src="../assets/icons/Analyze.png" alt="Analisar Produto" />
+                                    </button>
+                                    <button class="icon-container">
+                                        <img src="../assets/icons/Create.png" alt="Editar Produto" />
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <span>Resultados por página: </span>
+                <select name="items-per-page" id="items-shown">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
