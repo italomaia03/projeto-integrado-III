@@ -1,10 +1,13 @@
 import { ProdutoService } from "./service/produto.service.js";
-import { Tabela } from "./view/elements/tabela/tabela.view.js";
 import { produtos } from "./db/dados.db.js"; 
-import { AcoesTabela } from "./view/elements/tabela/acoesTabela.view.js";
 import { Modal } from "./view/elements/modal/modal.view.js";
+import { ProdutosView } from "./view/produtos/produtosView.view.js";
 
-const main = document.getElementById("produtos");
+const main = document.querySelector("main");
+const div = document.querySelector(".container");
+const iframe = document.querySelector(".painel");
+const produtoBtn = document.querySelector("#products-button");
+const acessoRapidoBtn = document.querySelector("#quick-access-btn");
 const cadastrarBtn = document.getElementById("new-product");
 const avaliarBtn = document.getElementById("view-product");
 const atualizarBtn = document.getElementById("update-product");
@@ -12,11 +15,6 @@ const deletarBtn = document.getElementById("delete-product");
 const listaProdutosConteiner = document.getElementById("products-list");
 
 const produtoService = new ProdutoService(produtos);
-const acoesProdutos = [
-  {nome: "Analisar Produto", src: "../assets/icons/Analyze.png"},
-  {nome: "Editar Produto", src: "../assets/icons/Create.png"},
-  {nome: "Remover Produto", src: "../assets/icons/delete.svg"}
-]
 
 const propsModalProduto = {
   tituloModal: "Cadastrar Produto",
@@ -50,29 +48,30 @@ const propsModalProduto = {
       id: "precoProduto",
       classe: "product-field"
     }
-  ]
+  ],
+  acao: (event) => {
+    event.preventDefault();
+    produtoService.cadastrar("Produto");
+  }
 };
 
 const modalCadastro = new Modal(main, propsModalProduto);
 const telaCadastro = modalCadastro.executar();
 
-const acoesTabelaProdutos = new AcoesTabela(acoesProdutos).executar(); 
+const produtosView = new ProdutosView(produtoService, {
+  modal: telaCadastro
+}).executar();
 
-const tabelaProdutos = new Tabela(
-  ["Código", "Nome", "Foto", "Classificação", "Marca", "Preço", "Ações"],
-  produtoService.listarProdutos(),
-  acoesTabelaProdutos,
-  listaProdutosConteiner
-);
+acessoRapidoBtn.addEventListener("click", () => {
+  if(main.hasChildNodes()){
+    main.lastChild.remove();
+    main.appendChild(iframe);
+  }
+})
 
-tabelaProdutos.render();
-
-cadastrarBtn.addEventListener("click", () => {
-  telaCadastro.showModal();
-});
-
-const fecharModalBtn = document.querySelector(".close-modal");
-
-fecharModalBtn.addEventListener("click", () => {
-  telaCadastro.close();
+produtoBtn.addEventListener("click", () => {
+  if(main.hasChildNodes()){
+    main.lastChild.remove();
+    main.appendChild(produtosView);
+  }
 })
