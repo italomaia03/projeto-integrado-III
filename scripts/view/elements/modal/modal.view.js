@@ -2,8 +2,7 @@ import { Botao } from "../botao.view.js";
 import { ItemFormulario } from "./itemFormulario.view.js";
 
 export class Modal {
-    constructor(conteiner, props) {
-        this.conteiner = conteiner;
+    constructor(props) {
         this.props = props;
     }
 
@@ -20,7 +19,10 @@ export class Modal {
             tipo: "submit",
             classe: "modal-button",
             tipoEvento: "click",
-            acao: this.props.acao
+            acao: (event) => {
+                event.preventDefault();
+                this.props.acao
+            }
         };
         const botaoSalvar = new Botao(botaoSalvarProps).executar();
         form.classList.add("modal-form");
@@ -68,7 +70,6 @@ export class Modal {
 
         modal.classList.add("modal");
 
-        this.conteiner.appendChild(modal);
         return modal;
     }
 }
