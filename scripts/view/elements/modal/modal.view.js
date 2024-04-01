@@ -1,8 +1,8 @@
+import { Botao } from "../botao.view.js";
 import { ItemFormulario } from "./itemFormulario.view.js";
 
 export class Modal {
-    constructor(conteiner, props) {
-        this.conteiner = conteiner;
+    constructor(props) {
         this.props = props;
     }
 
@@ -13,18 +13,26 @@ export class Modal {
 
     criarFormulario() {
         const form = document.createElement("form");
-        const submitBtn = document.createElement("input");
+        const botaoSalvarProps = {
+            tag: "input",
+            nome: "Salvar",
+            tipo: "submit",
+            classe: "modal-button",
+            tipoEvento: "click",
+            acao: (event) => {
+                event.preventDefault();
+                this.props.acao
+            }
+        };
+        const botaoSalvar = new Botao(botaoSalvarProps).executar();
         form.classList.add("modal-form");
         
         const campos = this.mapearCampos();
 
         campos.forEach(campo => form.appendChild(campo));
 
-        submitBtn.value = "Salvar";
-        submitBtn.type = "submit";
-        submitBtn.classList.add("modal-button");
-        
-        form.appendChild(submitBtn);
+        form.appendChild(botaoSalvar);
+        form.method = "POST";
 
         return form;
     }
@@ -33,11 +41,17 @@ export class Modal {
         const { tituloModal } = this.props;
         const tituloConteiner = document.createElement("div");
         const titulo = document.createElement("h2");
-        const fecharModalBtn = document.createElement("button");
+        const botaoProps = {
+            tag: "button",
+            nome: "X",
+            tipo: "button",
+            classe: "close-modal",
+            tipoEvento: "click",
+            acao: () => document.querySelector("dialog").close()
+        };
+        const fecharModalBtn = new Botao(botaoProps).executar();
 
         titulo.innerText = tituloModal;
-        fecharModalBtn.innerText = "X";
-        fecharModalBtn.classList.add("close-modal");
 
         tituloConteiner.appendChild(titulo);
         tituloConteiner.appendChild(fecharModalBtn)
@@ -56,7 +70,6 @@ export class Modal {
 
         modal.classList.add("modal");
 
-        this.conteiner.appendChild(modal);
         return modal;
     }
 }

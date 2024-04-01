@@ -3,10 +3,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
+  color: white;
 }
 
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -15,6 +17,7 @@ main {
   display: flex;
   width: 100%;
   height: 100%;
+  background-color: #232B2B;
 }
 
 header {
@@ -23,10 +26,6 @@ header {
   justify-content: space-between;
   height: 70px;
   background: #2d3737;
-}
-
-aside {
-  height: 100hv;
 }
 
 .usuario {
@@ -86,19 +85,7 @@ aside {
 .painel {
   width: 100%;
   background-color: rgb(72, 85, 85);
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.caminho-painel{
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-left: 10px;
-  height: 64px;
-  flex-shrink: 0;
-  background: #2D3737;
+  max-height: 40vh;
 }
 
 .images {
@@ -117,7 +104,7 @@ aside {
   align-items: center;
 }
 
-.nav_menu ul li a {
+.aside-btn {
   display: block;
   padding: 10px 20px;
   text-decoration: none;
@@ -125,7 +112,7 @@ aside {
   transition: background-color 0.3s ease;
 }
 
-.nav_menu ul li a:hover {
+.aside-btn:hover, .aside-btn:focus, .aside-btn:target {
   background-color: rgb(72, 85, 85);
   color: #ffffff;
 }
@@ -240,4 +227,17 @@ footer {
 .copyright {
   margin-top: 20px;
   font-size: 14px;
+}
+
+::-webkit-scrollbar{
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+  background: #3d4848;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #232B2B;
+  border-radius: .5rem;
 }

@@ -28,8 +28,6 @@ export class Tabela {
     return this.dados.map(dado => new ItemTabela(dado).executar(() => produtoItemTabelaMapper(dado, this.acoes)))
   }
 
-
-
   criarTabela() {
     const tabela = document.createElement("table");
     const corpo = document.createElement("tbody");
