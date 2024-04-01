@@ -7,9 +7,9 @@ import { BotaoCriarEtiqueta } from "./botaoCriarEtiqueta.view.js";
 import { BotaoCriarRelatorio } from "./botaoCriarRelatorio.view.js";
 
 export class ProdutosView {
-  constructor(service, props) {
+  constructor(service, modalCadastro) {
     this.service = service;
-    this.props = props;
+    this.modalCadastro = modalCadastro;
   }
 
   montarBarraCaminho() {
@@ -49,8 +49,7 @@ export class ProdutosView {
   montarSecaoPaginacao(itensPorPagina) {
     const secao = document.createElement("section");
     secao.id = "pagination";
-    let totalPaginas = this.service.listarProdutos().length / itensPorPagina;
-    totalPaginas = totalPaginas < 1 ? 1 : totalPaginas;
+    const totalPaginas = Math.ceil(this.service.listarProdutos().length / itensPorPagina);
     const props = ["Página: ", "1", " de ", totalPaginas];
     const conteudo = props.map((prop) => {
       const span = document.createElement("span");
@@ -69,12 +68,11 @@ export class ProdutosView {
     ];
     const secao = document.createElement("section");
     secao.id = "products-list";
-    const acoesTabelaProdutos = new AcoesTabela(acoesProdutos).executar();
 
     const tabelaProdutos = new Tabela(
       ["Código", "Nome", "Foto", "Classificação", "Marca", "Preço", "Ações"],
       this.service.listarProdutos(),
-      acoesTabelaProdutos,
+      acoesProdutos,
       secao
     );
 
@@ -82,10 +80,10 @@ export class ProdutosView {
     return secao;
   }
 
-  montarBotoes(modal) {
+  montarBotoes() {
     const botoes = [
       new BotaoAdicionarProduto({
-        acao: () => modal.showModal(),
+        acao: () => this.modalCadastro.showModal(),
       }).executar(),
       new BotaoCriarEtiqueta({
         acao: () => console.log("Etiqueta criada com sucesso!"),
@@ -145,7 +143,7 @@ export class ProdutosView {
     const div = document.createElement("div");
     div.classList.add("container");
 
-    div.append(barraCaminho, secaoProdutos, secaoItensPorPagina);
+    div.append(barraCaminho, secaoProdutos, secaoItensPorPagina, this.modalCadastro);
     return div;
   }
 }
