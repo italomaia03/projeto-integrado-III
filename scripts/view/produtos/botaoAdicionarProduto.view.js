@@ -10,6 +10,7 @@ export class BotaoAdicionarProduto {
       tag: "button",
       classe: "action",
       id: "new-product",
+      tipoEvento: "click",
       acao: this.props.acao,
     }).executar();
 

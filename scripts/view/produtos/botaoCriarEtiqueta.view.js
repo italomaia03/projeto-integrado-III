@@ -10,6 +10,7 @@ export class BotaoCriarEtiqueta {
       tag: "button",
       classe: "action",
       id: "new-tag",
+      tipoEvento: "click",
       acao: this.props.acao,
     }).executar();
 

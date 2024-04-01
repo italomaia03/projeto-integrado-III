@@ -10,6 +10,7 @@ export class BotaoCriarRelatorio {
       tag: "button",
       classe: "action",
       id: "new-report",
+      tipoEvento: "click",
       acao: this.props.acao,
     }).executar();
 
