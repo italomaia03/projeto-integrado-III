@@ -20,8 +20,12 @@ export class ProdutoService {
         return "Produto atualizado com sucesso!";
     }
 
-    buscarProduto(idProduto) {
+    buscarPorId(idProduto) {
         return this.produtoDatabase.find(produto => produto.idProduto === idProduto);
+    }
+
+    buscarPorNome(nome) {
+        return this.produtoDatabase.find(produto => produto.nomeProduto.toLowerCase() === nome.toLowerCase());
     }
 
     deletar(idProduto) {

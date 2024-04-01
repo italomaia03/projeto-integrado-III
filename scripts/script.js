@@ -1,78 +1,41 @@
 import { ProdutoService } from "./service/produto.service.js";
-import { Tabela } from "./view/elements/tabela/tabela.view.js";
 import { produtos } from "./db/dados.db.js"; 
-import { AcoesTabela } from "./view/elements/tabela/acoesTabela.view.js";
 import { Modal } from "./view/elements/modal/modal.view.js";
+import { ProdutosView } from "./view/produtos/produtosView.view.js";
+import { propsModalProduto } from "./view/elements/modal/modalCadastroProps.view.js";
 
-const main = document.getElementById("produtos");
-const cadastrarBtn = document.getElementById("new-product");
-const avaliarBtn = document.getElementById("view-product");
-const atualizarBtn = document.getElementById("update-product");
-const deletarBtn = document.getElementById("delete-product");
-const listaProdutosConteiner = document.getElementById("products-list");
+const main = document.querySelector("main");
+const iframe = document.querySelector(".painel");
+const produtoBtn = document.querySelector("#products-button");
+const acessoRapidoBtn = document.querySelector("#quick-access-btn");
+
 
 const produtoService = new ProdutoService(produtos);
-const acoesProdutos = [
-  {nome: "Analisar Produto", src: "../assets/icons/Analyze.png"},
-  {nome: "Editar Produto", src: "../assets/icons/Create.png"},
-  {nome: "Remover Produto", src: "../assets/icons/delete.svg"}
-]
 
-const propsModalProduto = {
-  tituloModal: "Cadastrar Produto",
-  camposForm: [
-    {
-      nome: "Nome do Produto",
-      tipo: "text",
-      id: "nomeProduto",
-      classe: "product-field"
-    },
-    {
-      nome: "Foto",
-      tipo: "file",
-      id: "fotoProduto"
-    },
-    {
-      nome: "Classificação do Produto",
-      tipo: "text",
-      id: "classificacaoProduto",
-      classe: "product-field"
-    },
-    {
-      nome: "Marca do Produto",
-      tipo: "text",
-      id: "marcaProduto",
-      classe: "product-field"
-    },
-    {
-      nome: "Preço do Produto",
-      tipo: "number",
-      id: "precoProduto",
-      classe: "product-field"
-    }
-  ]
-};
+main.removeChild(iframe)
+main.appendChild(iframe)
 
-const modalCadastro = new Modal(main, propsModalProduto);
-const telaCadastro = modalCadastro.executar();
+const modalCadastro = new Modal(propsModalProduto).executar();
 
-const acoesTabelaProdutos = new AcoesTabela(acoesProdutos).executar(); 
-
-const tabelaProdutos = new Tabela(
-  ["Código", "Nome", "Foto", "Classificação", "Marca", "Preço", "Ações"],
-  produtoService.listarProdutos(),
-  acoesTabelaProdutos,
-  listaProdutosConteiner
-);
-
-tabelaProdutos.render();
-
-cadastrarBtn.addEventListener("click", () => {
-  telaCadastro.showModal();
+Object.defineProperty(propsModalProduto, "acao", {
+  value: () => {
+    produtoService.cadastrar("Produto");
+  },
+  configurable: true
 });
 
-const fecharModalBtn = document.querySelector(".close-modal");
+const produtosView = new ProdutosView(produtoService, modalCadastro).executar();
 
-fecharModalBtn.addEventListener("click", () => {
-  telaCadastro.close();
+acessoRapidoBtn.addEventListener("click", () => {
+  if(main.hasChildNodes()){
+    main.lastChild.remove();
+    main.appendChild(iframe);
+  }
+})
+
+produtoBtn.addEventListener("click", () => {
+  if(main.hasChildNodes()){
+    main.lastChild.remove();
+    main.appendChild(produtosView);
+  }
 })
