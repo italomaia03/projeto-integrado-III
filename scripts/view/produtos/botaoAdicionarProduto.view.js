@@ -20,7 +20,11 @@ export class BotaoAdicionarProduto {
 
     scan.innerText = "Cadastrar Produto";
     
+<<<<<<< HEAD
     img.src = "/assets/icons/Plus Math.png";
+=======
+    img.src = "assets/icons/Plus Math.png";
+>>>>>>> cc83e8c7f6105bb03b33c4483a7960bbd5cca7e2
     img.alt = "Sinal de adição";
 
     conteinerImg.classList.add("icon-container");

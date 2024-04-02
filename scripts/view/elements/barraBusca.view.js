@@ -10,7 +10,11 @@ export class BarraBusca {
         const campoBusca = document.createElement("input");
         const iconeBusca = document.createElement("img");
         
+<<<<<<< HEAD
         iconeBusca.src = "/assets/icons/Search.svg";
+=======
+        iconeBusca.src = "assets/icons/Search.svg";
+>>>>>>> cc83e8c7f6105bb03b33c4483a7960bbd5cca7e2
         iconeBusca.alt = "Ícone de busca";
         
         campoBusca.type = "text";
