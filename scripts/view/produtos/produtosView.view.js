@@ -62,9 +62,9 @@ export class ProdutosView {
 
   montarConteudo() {
     const acoesProdutos = [
-      { nome: "Analisar Produto", src: "/assets/icons/Analyze.png" },
-      { nome: "Editar Produto", src: "/assets/icons/Create.png" },
-      { nome: "Remover Produto", src: "/assets/icons/delete.svg" },
+      { nome: "Analisar Produto", src: "assets/icons/Analyze.png" },
+      { nome: "Editar Produto", src: "assets/icons/Create.png" },
+      { nome: "Remover Produto", src: "assets/icons/delete.svg" },
     ];
     const secao = document.createElement("section");
     secao.id = "products-list";
