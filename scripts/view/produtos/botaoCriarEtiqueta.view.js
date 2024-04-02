@@ -20,7 +20,7 @@ export class BotaoCriarEtiqueta {
 
     scan.innerText = "Criar Etiqueta";
     
-    img.src = "/assets/icons/Parking Ticket.png";
+    img.src = "assets/icons/Parking Ticket.png";
     img.alt = "Etiqueta";
 
     conteinerImg.classList.add("icon-container");
