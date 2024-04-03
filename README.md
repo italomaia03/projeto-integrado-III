@@ -17,10 +17,8 @@ Link: https://italomaia03.github.io/projeto-integrado-III/
 
 ## Screenshots:
 
-<img src="./assets/screenshots/Página_acesso-rápido.png" height="400px"/>
-<img src="./assets/screenshots/Página_produtos.png" height="400px"/>
-
-<img src="./assets/screenshots/Cadastro_produtos.png" height="400px"/>
+<img src="./assets/screenshots/Página_acesso-rápido.png" height="280px"/>  <img src="./assets/screenshots/Página_produtos.png" height="280px"/>
+<img src="./assets/screenshots/Cadastro_produtos.png" height="250px"/>
 
 ## Estrutura do Projeto:
 
