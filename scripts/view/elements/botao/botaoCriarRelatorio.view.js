@@ -20,7 +20,11 @@ export class BotaoCriarRelatorio {
 
     scan.innerText = "Gerar Relatório";
     
+<<<<<<< HEAD
+    img.src = "/assets/icons/Parking Ticket.png";
+=======
     img.src = "assets/icons/Parking Ticket.png";
+>>>>>>> cc83e8c7f6105bb03b33c4483a7960bbd5cca7e2
     img.alt = "Relatório";
 
     conteinerImg.classList.add("icon-container");
