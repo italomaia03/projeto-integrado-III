@@ -17,7 +17,6 @@ export class VendasView {
   montarBarraCaminho() {
     return new BarraCaminho({
       aba: "Vendas",
-      acao: () => console.log("Início"),
     }).executar();
   }
 
