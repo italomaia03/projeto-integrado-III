@@ -13,10 +13,7 @@ Link: https://italomaia03.github.io/projeto-integrado-III/
 [Ítalo Fernandes de Oliveira Maia](https://github.com/italomaia03), 2022012656.
 
 ## Tecnologias Utilizadas
-
-    HTML
-    CSS
-    JavaScript
+[![My Skills](https://skillicons.dev/icons?i=html,css,js)]()
 
 ## Estrutura do Projeto
 
