@@ -3,14 +3,9 @@ export class ItemTabela {
         this.dado = dado;
     }
 
-    criarColunas(mapper) {
-        return mapper(this.dado);
-    }
-
-    executar(mapper){
-        const colunas = this.criarColunas(mapper);
+    executar(){
         const linhaEl = document.createElement("tr");
-        colunas.forEach(coluna => linhaEl.appendChild(coluna));
+        this.dado.forEach(coluna => {linhaEl.appendChild(coluna)});
         return linhaEl;
     }
 }

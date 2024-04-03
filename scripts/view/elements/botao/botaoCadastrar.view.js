@@ -1,6 +1,6 @@
-import { Botao } from "../elements/botao.view.js";
+import { Botao } from "./botao.view.js";
 
-export class BotaoAdicionarProduto {
+export class BotaoCadastrar {
   constructor(props) {
     this.props = props;
   }
@@ -18,7 +18,7 @@ export class BotaoAdicionarProduto {
     const conteinerImg = document.createElement("div");
     const img = document.createElement("img");
 
-    scan.innerText = "Cadastrar Produto";
+    scan.innerText = this.props.nome;
     
     img.src = "assets/icons/Plus Math.png";
     img.alt = "Sinal de adição";

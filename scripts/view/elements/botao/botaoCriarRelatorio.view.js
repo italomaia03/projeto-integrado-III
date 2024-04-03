@@ -1,4 +1,4 @@
-import { Botao } from "../elements/botao.view.js";
+import { Botao } from "./botao.view.js";
 
 export class BotaoCriarRelatorio {
   constructor(props) {

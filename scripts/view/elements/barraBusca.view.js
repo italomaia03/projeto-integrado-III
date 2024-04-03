@@ -1,4 +1,4 @@
-import { Botao } from "./botao.view.js";
+import { Botao } from "./botao/botao.view.js";
 
 export class BarraBusca {
     constructor(props) {

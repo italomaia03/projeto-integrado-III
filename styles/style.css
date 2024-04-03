@@ -241,3 +241,17 @@ footer {
   background: #232B2B;
   border-radius: .5rem;
 }
+
+fieldset {
+  display: flex;
+  font-size: .9rem;
+  padding: .5rem;
+  gap: 2rem;
+}
+
+fieldset div {
+  display: flex;
+  gap: .5rem;
+  align-items: baseline;
+}
+
