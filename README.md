@@ -16,7 +16,7 @@
 [![My Skills](https://skillicons.dev/icons?i=html,css,js)]()
 
 ## Screenshots:
-<img src="./assets/screenshots/Página_acesso-rápido.png" height="280px"/> <img src="./assets/screenshots/Página_produtos.png" height="280px"/>
+<img src="./assets/screenshots/Página_acesso-rápido.png" height="280px"/> <img src="./assets/screenshots/Página_produtos.png" height="280px"/> <img src="./assets/screenshots/página_vendas.png" height="280px"/>
 <img src="./assets/screenshots/Cadastro_produtos.png" height="250px"/>
 
 ## Estrutura do Projeto:
