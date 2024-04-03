@@ -15,6 +15,10 @@
 ## Tecnologias Utilizadas:
 [![My Skills](https://skillicons.dev/icons?i=html,css,js)]()
 
+## Screenshots
+<img src="./assets/screenshots/Página_acesso-rápido.png" height="280px"/> <img src="./assets/screenshots/Página_produtos.png" height="280px"/>
+<img src="./assets/screenshots/Cadastro_produtos.png" height="250px"/>
+
 ## Estrutura do Projeto:
 
 * O design do __[projeto](https://www.figma.com/file/8G1OjzN2wYm2Eu7faB3p7y/controle_de_estoque?type=design&node-id=0%3A1&mode=design&t=3fFgEXMAYoyz1Xet-1)__ foi desenvolvido no Figma.
