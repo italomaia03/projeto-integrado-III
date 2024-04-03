@@ -1,8 +1,5 @@
-import produtoItemTabelaMapper from "../../util/produtoItemTabelaMapper.js";
-import { ItemTabela } from "./itemTabela.view.js";
-
 export class Tabela {
-  constructor(cabecalho, dados, acoes, conteiner) {
+  constructor(cabecalho, dados, acoes, conteiner, mapper) {
     this.titulos = cabecalho;
     this.dados = dados;
     this.acoes = acoes;
@@ -24,16 +21,12 @@ export class Tabela {
     return linha;
   }
 
-  mapearDados() {
-    return this.dados.map(dado => new ItemTabela(dado).executar(() => produtoItemTabelaMapper(dado, this.acoes)))
-  }
-
-  criarTabela() {
+  criarTabela(mapper) {
     const tabela = document.createElement("table");
     const corpo = document.createElement("tbody");
     const cabecalho = document.createElement("thead");
     const titulos = this.criarCabecalho();
-    const dados = this.mapearDados();
+    const dados = mapper(this.dados, this.acoes);
     cabecalho.appendChild(titulos);
     dados.forEach((dado) => corpo.appendChild(dado));
     tabela.appendChild(cabecalho);
@@ -41,8 +34,8 @@ export class Tabela {
     return tabela;
   }
 
-  render() {
-    const tabela = this.criarTabela();
+  render(mapper) {
+    const tabela = this.criarTabela(mapper);
     this.conteiner.appendChild(tabela);
   }
 }

@@ -1,6 +1,6 @@
-import { Botao } from "../elements/botao.view.js";
+import { Botao } from "./botao.view.js";
 
-export class BotaoCriarEtiqueta {
+export class BotaoCriarRelatorio {
   constructor(props) {
     this.props = props;
   }
@@ -9,7 +9,7 @@ export class BotaoCriarEtiqueta {
     const botao = new Botao({
       tag: "button",
       classe: "action",
-      id: "new-tag",
+      id: "new-report",
       tipoEvento: "click",
       acao: this.props.acao,
     }).executar();
@@ -18,14 +18,14 @@ export class BotaoCriarEtiqueta {
     const conteinerImg = document.createElement("div");
     const img = document.createElement("img");
 
-    scan.innerText = "Criar Etiqueta";
+    scan.innerText = "Gerar Relatório";
     
 <<<<<<< HEAD
     img.src = "/assets/icons/Parking Ticket.png";
 =======
     img.src = "assets/icons/Parking Ticket.png";
 >>>>>>> cc83e8c7f6105bb03b33c4483a7960bbd5cca7e2
-    img.alt = "Etiqueta";
+    img.alt = "Relatório";
 
     conteinerImg.classList.add("icon-container");
     conteinerImg.appendChild(img);

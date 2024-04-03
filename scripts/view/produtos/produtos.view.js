@@ -1,15 +1,16 @@
-import { BarraBusca } from "../elements/barraBusca.view.js";
-import { AcoesTabela } from "../elements/tabela/acoesTabela.view.js";
 import { Tabela } from "../elements/tabela/tabela.view.js";
 import { BarraCaminho } from "../elements/barraCaminho.view.js";
-import { BotaoAdicionarProduto } from "./botaoAdicionarProduto.view.js";
-import { BotaoCriarEtiqueta } from "./botaoCriarEtiqueta.view.js";
-import { BotaoCriarRelatorio } from "./botaoCriarRelatorio.view.js";
+import { BotaoCadastrar } from "../elements/botao/botaoCadastrar.view.js";
+import { BotaoCriarEtiqueta } from "../elements/botao/botaoCriarEtiqueta.view.js";
+import { BotaoCriarRelatorio } from "../elements/botao/botaoCriarRelatorio.view.js";
+import { SecaoAcoes } from "../elements/secaoAcoes.view.js";
+import executarProdutoMapper from "../util/produtoItemTabelaMapper.js";
 
 export class ProdutosView {
-  constructor(service, modalCadastro) {
+  constructor(service, modalCadastro, props) {
     this.service = service;
     this.modalCadastro = modalCadastro;
+    this.props = props;
   }
 
   montarBarraCaminho() {
@@ -20,36 +21,19 @@ export class ProdutosView {
   }
 
   montarSecaoAcoes() {
-    const secao = document.createElement("section");
-    const iconeTab = document.createElement("img");
-    const iconeTabConteiner = document.createElement("div");
-    const acoesConteiner = document.createElement("div");
-    const botoes = this.montarBotoes();
-    const barraBusca = new BarraBusca({
+    const secaoAcaoProps = {
       placeholder: "Buscar produtos...",
-      acao: (nome) => this.service.buscarPorNome(nome),
-    }).executar();
+      icone: this.props.icone,
+      botoes: this.montarBotoes()
+    };
 
-    iconeTab.src = "../assets/icons/Trolley.png";
-    iconeTab.alt = "Carrinho de Compras";
-
-    iconeTabConteiner.appendChild(iconeTab);
-    iconeTabConteiner.id = "trolley-icon";
-
-    acoesConteiner.id = "actions-container";
-    botoes.forEach((botao) => acoesConteiner.appendChild(botao));
-    acoesConteiner.appendChild(barraBusca);
-    secao.appendChild(iconeTabConteiner);
-    secao.appendChild(acoesConteiner);
-    secao.id = "actions";
-
-    return secao;
+    return new SecaoAcoes(this.service, secaoAcaoProps).executar();
   }
 
   montarSecaoPaginacao(itensPorPagina) {
     const secao = document.createElement("section");
     secao.id = "pagination";
-    const totalPaginas = Math.ceil(this.service.listarProdutos().length / itensPorPagina);
+    const totalPaginas = Math.ceil(this.service.listar().length / itensPorPagina);
     const props = ["Página: ", "1", " de ", totalPaginas];
     const conteudo = props.map((prop) => {
       const span = document.createElement("span");
@@ -60,7 +44,7 @@ export class ProdutosView {
     return secao;
   }
 
-  montarConteudo() {
+  montarConteudo(filtro) {
     const acoesProdutos = [
 <<<<<<< HEAD
       { nome: "Analisar Produto", src: "/assets/icons/Analyze.png" },
@@ -77,18 +61,18 @@ export class ProdutosView {
 
     const tabelaProdutos = new Tabela(
       ["Código", "Nome", "Foto", "Classificação", "Marca", "Preço", "Ações"],
-      this.service.listarProdutos(),
+      this.service.listar(filtro),
       acoesProdutos,
-      secao
+      secao,
     );
-
-    tabelaProdutos.render();
+    tabelaProdutos.render(executarProdutoMapper);
     return secao;
   }
 
   montarBotoes() {
     const botoes = [
-      new BotaoAdicionarProduto({
+      new BotaoCadastrar({
+        nome: "Cadastrar Produto",
         acao: () => this.modalCadastro.showModal(),
       }).executar(),
       new BotaoCriarEtiqueta({
@@ -129,26 +113,25 @@ export class ProdutosView {
     return {itensPorPagina: Number(select.value), secaoItensPorPagina: secao};
   }
 
-  montarSecaoProdutos(itensPorPagina) {
+  montarSecaoProdutos(itensPorPagina, filtro) {
     const produtos = document.createElement("section");
     produtos.classList.add("produtos");
     produtos.id = "products-content";
     const conteudo = [
       this.montarSecaoAcoes(),
       this.montarSecaoPaginacao(itensPorPagina),
-      this.montarConteudo(),
+      this.montarConteudo(filtro),
     ];
     conteudo.forEach((item) => produtos.appendChild(item));
     return produtos;
   }
 
-  executar() {
+  executar(filtro) {
     const { itensPorPagina, secaoItensPorPagina } = this.montarSecaoItensPorPagina();
-    const secaoProdutos = this.montarSecaoProdutos(itensPorPagina);
+    const secaoProdutos = this.montarSecaoProdutos(itensPorPagina, filtro);
     const barraCaminho = this.montarBarraCaminho();
     const div = document.createElement("div");
-    div.classList.add("container");
-
+    div.classList.add("container", "products");
     div.append(barraCaminho, secaoProdutos, secaoItensPorPagina, this.modalCadastro);
     return div;
   }

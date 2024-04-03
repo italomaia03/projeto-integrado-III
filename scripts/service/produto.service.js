@@ -5,7 +5,10 @@ export class ProdutoService {
         this.produtoDatabase = produtoDatabase;
     }
 
-    listarProdutos() {
+    listar(filtro) {
+        if(filtro){
+            return this.produtoDatabase.filter(filtro);
+        }
         return this.produtoDatabase;
     }
 
