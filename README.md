@@ -2,8 +2,7 @@
 
 * Projeto (front-end) de um MVP Web da disciplina de Projeto Integrado III da Universidade Federal do Cariri (UFCA)
 * Tema Escolhido: Estoque de produtos de um supermercado de bairro.
-
-Link: https://italomaia03.github.io/projeto-integrado-III/
+* Link: https://italomaia03.github.io/projeto-integrado-III/
 
 ## Autores:
 
