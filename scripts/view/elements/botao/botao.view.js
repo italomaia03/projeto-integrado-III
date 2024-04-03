@@ -25,8 +25,9 @@ export class Botao {
         if(id) {
             botao.id = id;
         }
-        
-        botao.addEventListener(tipoEvento, acao);
+        if(tipoEvento && acao) {
+            botao.addEventListener(tipoEvento, acao);
+        }
         return botao;
     }   
 }

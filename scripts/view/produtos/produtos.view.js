@@ -16,7 +16,6 @@ export class ProdutosView {
   montarBarraCaminho() {
     return new BarraCaminho({
       aba: "Produtos",
-      acao: () => console.log("Início"),
     }).executar();
   }
 
@@ -46,15 +45,9 @@ export class ProdutosView {
 
   montarConteudo(filtro) {
     const acoesProdutos = [
-<<<<<<< HEAD
-      { nome: "Analisar Produto", src: "/assets/icons/Analyze.png" },
-      { nome: "Editar Produto", src: "/assets/icons/Create.png" },
-      { nome: "Remover Produto", src: "/assets/icons/delete.svg" },
-=======
       { nome: "Analisar Produto", src: "assets/icons/Analyze.png" },
       { nome: "Editar Produto", src: "assets/icons/Create.png" },
       { nome: "Remover Produto", src: "assets/icons/delete.svg" },
->>>>>>> cc83e8c7f6105bb03b33c4483a7960bbd5cca7e2
     ];
     const secao = document.createElement("section");
     secao.id = "products-list";

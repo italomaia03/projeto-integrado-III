@@ -17,6 +17,7 @@ export class BarraCaminho {
             nome: "Início",
             tipo: "button",
             id: "botao-inicio",
+            classe: "quick-access-btn",
             tipoEvento: "click",
             acao: this.props.acao
         }).executar();
