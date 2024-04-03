@@ -18,7 +18,7 @@
 ## Screenshots:
 <img src="./assets/screenshots/Página_acesso-rápido.png" height="280px"/> <img src="./assets/screenshots/Página_produtos.png" height="280px"/> 
 
-<img src="./assets/screenshots/página_vendas.png" height="280px"/><img src="./assets/screenshots/Cadastro_produtos.png" height="250px"/>
+<img src="./assets/screenshots/página_vendas.png" height="280px"/>
 
 ## Estrutura do Projeto:
 
