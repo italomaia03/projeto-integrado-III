@@ -1,17 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    color: white;
-    box-sizing: border-box;
-    font-family: "Inter";
-}
-
-body {
-    height: 100%;
-}
-
 #controle {
     width: 98%;
     height: 90%;
@@ -110,36 +96,8 @@ button:hover {
     max-height: 1.5rem;
 }
 
-table {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    table-layout: fixed;
-    display: table;
-    background-color: #3d4848;
-    margin-top: 1%;
-    overflow: hidden;
-}
-
-td,
-th {
-    padding: 1% 0;
-}
-
-th {
-    background-color: #232B2B;
-}
-
-td {
-    border: none;
-}
-
-tr:nth-child(odd) {
-    background-color: #485555;
-}
-
-tr:nth-child(even) {
-    background-color: #3d4848;
+.table-row-icon{
+    max-height: 3rem;
 }
 
 #vendas-actions {
@@ -190,7 +148,8 @@ tr:nth-child(even) {
 
 #date-filters {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #start-date,
