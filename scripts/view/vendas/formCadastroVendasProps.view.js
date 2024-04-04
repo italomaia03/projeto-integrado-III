@@ -55,11 +55,6 @@ const botaoSalvarProps = {
     nome: "Salvar",
     tipo: "submit",
     classe: "modal-button",
-    tipoEvento: "click",
-    acao: (event) => {
-        event.preventDefault();
-        console.log("Produto salvo com sucesso!");
-    }
 };
 const botaoSalvar = new Botao(botaoSalvarProps).executar();
 
@@ -80,5 +75,5 @@ export const formCadastroVendasProps = {
   classe: "modal-form",
   metodo: "POST",
   inputs: inputsEl,
-  botoes: [botaoSalvar]
+  botao: botaoSalvar
 };

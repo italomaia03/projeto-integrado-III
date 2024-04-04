@@ -13,6 +13,11 @@ export class ProdutoService {
     }
 
     cadastrar(produto) {
+        const numeroAleatorio = `${Math.floor(Math.random()*1000000)}`;
+        if(numeroAleatorio.length < 7){
+            numeroAleatorio.padStart(7, "0");
+        }
+        produto.idProduto = numeroAleatorio;
         this.produtoDatabase.push(produto);
         return "Produto cadastrado com sucesso!";
     }

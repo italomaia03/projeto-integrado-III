@@ -1,10 +1,12 @@
+import cadastrarProdutoEvent from "../../../events/cadastrarProduto.event.js";
+
 export class Form {
     constructor(props) {
         this.props = props
     }
 
     executar() {
-        const { id, classe, metodo, inputs, botoes } = this.props;
+        const { id, classe, metodo, inputs, botao, service } = this.props;
         const form = document.createElement("form");
         if (id) {
             form.id = id;
@@ -17,7 +19,11 @@ export class Form {
         }
 
         inputs.forEach(input => form.appendChild(input));
-        botoes.forEach(botao => form.appendChild(botao));
+        botao.addEventListener("click", (event) => {
+            event.preventDefault();
+            cadastrarProdutoEvent(service);
+        });
+        form.appendChild(botao);
         return form;
     }
 }
