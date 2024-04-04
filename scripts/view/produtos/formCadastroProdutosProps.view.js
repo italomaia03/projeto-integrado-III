@@ -42,24 +42,25 @@ const inputPrecoProduto = {
 };
 
 const botaoSalvarProps = {
-    tag: "input",
-    nome: "Salvar",
-    tipo: "submit",
-    classe: "modal-button",
-    tipoEvento: "click",
-    acao: (event) => {
-        event.preventDefault();
-        console.log("Produto salvo com sucesso!");
-    }
+  tag: "input",
+  nome: "Salvar",
+  tipo: "submit",
+  classe: "modal-button",
 };
 const botaoSalvar = new Botao(botaoSalvarProps).executar();
 
-const inputs = [inputNomeProduto, inputFotoProduto, inputClassificacaoProduto, inputMarcaProduto, inputPrecoProduto];
-const inputsEl = inputs.map(input => new Input(input).executar());
+const inputs = [
+  inputNomeProduto,
+  inputFotoProduto,
+  inputClassificacaoProduto,
+  inputMarcaProduto,
+  inputPrecoProduto,
+];
+const inputsEl = inputs.map((input) => new Input(input).executar());
 
-export const formCadastroProdutosProps = {
+export const propsProduto = {
   classe: "modal-form",
   metodo: "POST",
   inputs: inputsEl,
-  botoes: [botaoSalvar]
+  botao: botaoSalvar,
 };
